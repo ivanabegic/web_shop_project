@@ -1,0 +1,4849 @@
+/*###################### Defaults ######################*/
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.row ::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+header ::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="top-"] {
+    padding: 5px;
+    float: left;
+}
+
+
+nav, 
+header,
+main, 
+footer {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+    background-color: #f5f5f5;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*##################### scroll-top-btn #####################*/
+
+.scroll-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/*######################  hamburger-menu #######################*/
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color:  #d9d9d9;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a,
+.side-menu .side-navbar-item, .side-navbar-processors, .side-navbar-motherboards, .side-navbar-graphic-cards, .side-navbar-ram, .side-navbar-data-storage, 
+.side-navbar-fans-and-coolers, .side-navbar-cases-and-power-supply, .side-navbar-amd, .side-navbar-intel, .side-navbar-asrock-m, .side-navbar-asus-m, .side-navbar-gigabyte-m, 
+.side-navbar-asrock-g, .side-navbar-asus-g, .side-navbar-gigabyte-g, .side-navbar-corsair, .side-navbar-crucial, .side-navbar-gskill, .side-navbar-kingston, .side-navbar-ssd, 
+.side-navbar-hdd, .side-navbar-external-hdd, .side-navbar-fans, .side-navbar-coolers, .side-navbar-water-cooling, .side-navbar-cases, .side-navbar-power-supply,
+.side-navbar-monitors, .side-navbar-headsets, .side-navbar-keyboards, .side-navbar-mice, .side-navbar-speakers, .side-navbar-microphones, .side-navbar-webcams,
+.side-navbar-ps5, .side-navbar-nintendo-switch, .side-navbar-gaming-chairs, .side-navbar-gaming-desks, .side-navbar-gaming-driving-equipment {
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+ .side-navbar-menu, .side-navbar-components, .side-navbar-peripherals, .side-navbar-gaming, .side-navbar-processors-list, .side-navbar-motherboards-list, .side-navbar-graphic-cards-list, 
+ .side-navbar-ram-list, .side-navbar-data-storage-list, .side-navbar-fans-and-coolers-list, .side-navbar-cases-and-power-supply-list {
+    list-style: none;
+    display: block;
+    font-family: 'Kumbh Sans',sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding-left: 10%;
+    margin-top: 20%;
+}
+
+.side-menu a {
+    transition: transform 0.3s ease;
+}
+
+.side-menu .side-navbar-item:hover,
+.side-menu a:hover {
+    transform: scale(1.05);
+}
+  
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 6%;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+}
+
+.row .side-navbar-item, .side-navbar-processors, .side-navbar-motherboards, .side-navbar-graphic-cards, .side-navbar-ram, .side-navbar-data-storage, .side-navbar-fans-and-coolers, 
+.side-navbar-cases-and-power-supply, .side-navbar-amd, .side-navbar-intel, .side-navbar-asrock-m, .side-navbar-asus-m, .side-navbar-gigabyte-m, .side-navbar-asrock-g, 
+.side-navbar-asus-g, .side-navbar-gigabyte-g, .side-navbar-corsair, .side-navbar-crucial, .side-navbar-gskill, .side-navbar-kingston, .side-navbar-ssd, .side-navbar-hdd, 
+.side-navbar-external-hdd, .side-navbar-fans, .side-navbar-coolers, .side-navbar-water-cooling, .side-navbar-cases, .side-navbar-power-supply,
+.side-navbar-monitors, .side-navbar-headsets, .side-navbar-keyboards, .side-navbar-mice, .side-navbar-speakers, .side-navbar-microphones, .side-navbar-webcams,
+.side-navbar-ps5, .side-navbar-nintendo-switch, .side-navbar-gaming-chairs, .side-navbar-gaming-desks, .side-navbar-gaming-driving-equipment {
+    width: 80%;
+}
+
+.row .arrow-right {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-right {
+    padding-top: 2%;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+[class^="arrow-left-"] {
+    position: absolute;
+    font-size: 24px;
+    left: 10px;
+    font-weight: normal;
+    cursor: pointer;
+    display: none;
+}
+
+.side-navbar-components, .side-navbar-peripherals, .side-navbar-gaming, .side-navbar-processors-list, .side-navbar-motherboards-list, .side-navbar-graphic-cards-list, .side-navbar-ram-list, 
+.side-navbar-data-storage-list, .side-navbar-fans-and-coolers-list, .side-navbar-cases-and-power-supply-list  {
+    display: none;
+}
+
+.side-navbar-components p, .side-navbar-peripherals p, .side-navbar-gaming p, .side-navbar-processors-list p, .side-navbar-motherboards-list p, .side-navbar-graphic-cards-list p, .side-navbar-ram-list p, 
+.side-navbar-data-storage-list p, .side-navbar-fans-and-coolers-list p, .side-navbar-cases-and-power-supply-list p {
+    font-size: 16px;
+    font-family: 'Kumbh Sans',sans-serif;
+    font-weight: bold;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+/*###################### window.innerWidth <= 900 results-count ######################*/
+
+.results-count-components, .results-count-peripherals, .results-count-gaming {
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    display: none; 
+}
+
+/*###################### top-header ######################*/
+
+.top-header {
+    width: 100%;
+    height: 122px;
+    position: relative;
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    align-items: center;
+    padding: 0 2%;
+    z-index: 999;
+    border-top: 31px solid #f6f6f6;
+    border-bottom: 31px solid #f6f6f6;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+.sticky + .main {
+    padding-top: 122px;
+}
+
+/*###################### top-header-logo ######################*/
+
+.top-header-logo {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+div.pc-shop-logo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*###################### top-header-nav ######################*/
+
+.top-header-nav {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-header-nav.navbar-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-components, .navbar-peripherals, .navbar-gaming {
+    list-style: none;
+    float: left;
+    margin-left: -40px;
+    display: block;
+    color: black;
+    font-family: 'Kumbh Sans',sans-serif;
+    min-height: 16px;
+    font-weight: bold;
+    padding: 0 3rem; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+ul.navbar-menu li.navbar-components:hover, ul.navbar-menu li.navbar-peripherals:hover, ul.navbar-menu li.navbar-gaming:hover {
+    transform: scale(1.05); 
+}
+
+/*###################### top-header-search ######################*/
+
+.top-header-search {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.search {
+    --padding: 8px;
+
+    display: flex;
+    align-items: center;
+    width: max-content;
+    position: absolute;
+    padding: var(--padding);
+    border-radius: 100vh;
+    background-color: #f6f6f6;
+    transition: box-shadow 0.25s;
+    
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.search:hover {
+    background-color: #e6e6e6;
+    color: #262626;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search.active {
+    background-color: #e6e6e6;
+    transition: 0.5s ease-in-out;
+    right: 7%;
+}
+
+.search-input {
+    font-size: 15px;
+    font-family: 'Lexend',sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 130px;
+}
+
+.search-input::placeholder,
+.search-icon {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-input.active {
+    background: #e6e6e6;
+    position: relative;
+    width: 1000px;
+    font-size: 16px;
+}
+
+.search-icon {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.search-icon.active {
+    background: #e6e6e6;
+    font-size: 28px;
+}
+
+.close-icon{
+    opacity: 0;
+    visibility: hidden;
+    scale: 0;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.close-icon.active {
+    opacity: 1;
+    visibility: visible;
+    scale: 1;
+    position: relative;
+    left: 95%;
+    background: #e6e6e6;
+    font-size: 28px;
+    z-index: 2;
+}
+
+.search-icon.active:hover, .close-icon.active:hover {
+    border-radius: 100vh;
+    background: #f6f6f6;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+display: none; 
+}
+
+/*###################### top-header-search-mobile ######################*/
+
+.top-header-search-mobile {
+    display: none;
+}
+
+.search-mobile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    cursor: pointer;   
+}
+
+.search-icon-mobile {
+    position: relative;
+    left: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.search-icon-mobile.active {
+    left: 30px;
+    background: white;
+}
+
+.close-search-mobile {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    scale: 0;
+}
+
+.close-search-mobile.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    scale: 1;
+    position: relative;
+    left: 35px;
+    background: white;
+}
+
+.search-icon-mobile, .close-search-mobile.active {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 28px;
+}
+
+.search-icon-mobile:hover, .close-search-mobile:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+.search-box-mobile {
+    position: absolute;
+    display: flex;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: white;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.search-box-mobile.active {
+    right: 0;
+    background: white;
+}
+
+.search-input-mobile {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    color:black;
+    font-size: 16px;
+    background: white;
+    font-family: 'Lexend',sans-serif;
+}
+
+/*###################### search-results display #####################*/
+
+.search-result-message {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    margin-top: 0px;
+    display: flex;
+    display: none;
+    background-color: white;
+    align-items:flex-start;
+    padding: 2% 7% 4% 12%;
+    font-size: 20px;
+    font-family:'Kumbh Sans',sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/*###################### top-header-icons ######################*/
+
+.top-header-icons {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wishlist{
+    width: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: right;
+}
+
+.favorite {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 26px;
+    padding-left: 12px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.favorite-quantity {
+    background-color: black;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 20px; 
+    height: 20px; 
+    right: 1%;
+    top: -4px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0; 
+    text-align: center;
+}
+
+.shopping-bag {
+    width: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 11px;
+    text-align: right;
+}
+
+.shopping-bag-icon {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+
+.shopping-bag-quantity {
+    background-color: black;
+    color: white;
+    font-family:'Kumbh Sans',sans-serif;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    right: 1%;
+    top: -4px;
+}
+
+.hamburger-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.wishlist:hover, .shopping-bag:hover, .hamburger-icon:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+/*###################### main ######################*/
+
+.main {
+    width: 100%;
+    max-height: 200000px;
+    min-height: 700px;
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    align-items:flex-start;
+    padding: 2% 7% 4% 7%;
+}
+
+/*###################### filter, filter-peripherals, filter-gaming ######################*/
+
+.filter, .filter-peripherals, .filter-gaming {
+    width: 100%;
+    max-height: 3000px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items:flex-start;       
+}
+
+.filter-checkbox, .sub-checkbox-processor, .sub-checkbox-motherboard, .sub-checkbox-graphic-card, .sub-checkbox-ram, .sub-checkbox-data-storage, .sub-checkbox-fans-and-coolers, 
+.sub-checkbox-cases-and-power-supply, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+    width: 100%;
+    max-height: 480px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items:flex-start;
+    margin-top: 30%;
+    padding: 5%;
+}
+
+.sub-checkbox-processor, .sub-checkbox-motherboard, .sub-checkbox-graphic-card, .sub-checkbox-ram, .sub-checkbox-data-storage, .sub-checkbox-fans-and-coolers, 
+.sub-checkbox-cases-and-power-supply{
+    margin-top: 10%;
+    display: none;
+}
+
+.filter-checkbox p, .sub-checkbox-processor p, .sub-checkbox-motherboard p, .sub-checkbox-graphic-card p, .sub-checkbox-ram p, .sub-checkbox-data-storage p, 
+.sub-checkbox-fans-and-coolers p, .sub-checkbox-cases-and-power-supply p, .filter-peripherals-checkbox p, .filter-gaming-checkbox p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 20px 30px 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding: 8px;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family:'Kumbh Sans',sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.checkMark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    border: 1px solid #8D8E90;
+    background-color: white;
+    border-radius: 3px;
+}
+  
+.container:hover input ~ .checkMark{
+    background-color: #f2f2f2;
+ }
+  
+.container input:checked ~ .checkMark{
+    background-color: black;
+}
+  
+.checkMark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.container input:checked ~ .checkMark:after {
+    display: block;
+}
+  
+.container .checkMark:after {
+    left: 8px;
+    top: 2px;
+    width: 5px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*###################### slideshow ######################*/
+
+.slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 2%;
+    display: block;
+}
+
+.slides {
+    border: 5px solid #f6f6f6;
+    display: none; 
+}
+
+.slide {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 3%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    background: none;
+    border-radius: 6px;
+    top: 50%;
+    padding: 16px;
+    margin-top: -65px;
+    color: #bfbfbf;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 125px;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    user-select: none;
+    z-index: 7;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #f6f6f6;
+}
+
+.slideshow-dots {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 1px;
+    display: flex;
+    background-color: transparent;
+    overflow: hidden;
+    align-items:flex-end;
+    padding-bottom: 10px;
+    text-align: center;
+    justify-content:center
+}
+
+.dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 2px;
+    background-color: #bfbfbf;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color all .3s;;
+  }
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*##################### favorite-content #####################*/
+
+.empty-wishlist {
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 7%;
+    display: none;
+}
+
+.favorite-content {
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: none;
+}
+
+.number-of-favorite-products {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    margin-top: 0px;
+    display: flex;
+    display: none;
+    background-color: white;
+    align-items:flex-start;
+    padding: 2% 7% 4% 7%;
+    font-size: 20px;
+    font-family:'Kumbh Sans',sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.favorites-picked {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 200000px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    margin-top: 12%;
+    padding-left: 4%;
+}
+
+.favorite-product {
+    height: 720px;
+    padding: 0 2%;
+    margin: 0 2%;
+    max-width: 29.33%;
+    flex: 29.33%;
+}
+
+.favorite-product:hover {
+    border: 2px solid #f6f6f6;
+}
+
+.favorite-product img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 4%;  
+}
+
+.favorite-product .favorite-item {
+    color: red;
+    font-weight: bolder;
+}
+
+/*##################### basket-content #####################*/
+
+.empty-basket {
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 7%;
+    display: none;
+}
+
+.basket-content {
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    padding: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: none;
+}
+
+.your-basket {
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 25px;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 1% 0 4% 1%;
+} 
+
+.basket-details {
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center; 
+    border-bottom: 1px solid #ccc;
+    width: 62%;
+    box-sizing: border-box;
+    margin-top: 2%;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.product {
+    display: flex;
+    width: 58%;
+    padding-left: 6%;
+}
+
+.product-quantity {
+    display: flex;
+    width: 20%;
+    justify-content: right;
+    padding-right: 2%;
+}
+
+.product-price {
+    display: flex;
+    width: 10%;
+    justify-content: right;
+    padding-right: 1%;
+}
+
+.remove-all-button {
+    display: flex;
+    width: 15%;
+    justify-content: right;
+    border: none;
+    background: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remove-all-button p {
+    color: red;
+    padding-left: 1%;
+    display: flex;
+}
+
+.remove-all-button:hover {
+    transform: scale(1.05);
+}
+
+.rows-basket {
+    display: flex;
+    width: 100%; 
+}
+
+.items-picked {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+
+.items-picked > .basket-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 100%; 
+    box-sizing: border-box;
+    padding-left: 4%;
+}
+
+.items-picked img {
+    width: 12%;
+    height: 12%;
+}
+
+.items-picked h4 {
+    flex-grow: 1;
+    margin: 0;
+    width: 53%;
+    font-weight: lighter;
+}
+
+.items-picked .price, .items-picked .items-quantity {
+    margin: 0 10px;
+}
+
+.items-picked .price {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+}
+
+.items-picked .items-quantity {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+    width: 13%; 
+    height: 35px;
+    border: none;
+    padding-left: 5%;
+}
+
+.items-picked .items-quantity span {
+    text-align: center;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.items-picked .items-quantity span.minus {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.items-picked .items-quantity span.number{
+    color: gray;
+    pointer-events: none;
+}
+
+.items-picked .delete-item {
+    display: flex;
+    cursor: pointer;
+    width: 10%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.order-form {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-right: 2%;
+    margin-top: 2%;
+    display: none;
+}
+
+.billing-address input {
+    padding: 1.5%;
+    margin-bottom: 4%;
+}
+
+#first-name {
+    margin-right: 2%;
+}
+
+#first-name, #last-name {
+    width: 50%;
+   
+}
+
+#address {
+    width: 100%;
+}
+
+#city, #country, #postal-code, #phone {
+    width: 32%;
+}
+
+#city, #country, #phone {
+    margin-right: 2%;
+}
+
+#email {
+    width: 66%;
+}
+
+.checkout-order-summary-box {
+    width: 100%;
+    height: 315px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    margin-left: 6%;
+    margin-top: 4%;
+    padding: 1%;
+}
+
+.checkout-order-summary-box .purchase-summary {
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #cccccc;
+    font-size: 15px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.checkout-order-summary-box .subtotal {
+    font-size: 15px;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.checkout-order-summary-box .total {
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.checkout {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10%;
+    height: 45px;
+    width: 100%;
+}
+
+.checkout button, .return-to-basket, .submit-order {
+    border-radius: 0;
+    height: 45px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    background: black;
+    cursor: pointer;
+}
+
+.submit-order {
+    margin-top: 2%;
+}
+
+.order-confirmation {
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 17px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 7%;
+    border: 2px solid #f6f6f6;
+    background-color: #f2f2f2;
+    display: none;
+}
+
+.close-order-confirmation {
+    display: flex;
+    justify-content: right;
+    margin-top: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+}
+
+.order-confirmed {
+    margin-top: 1%;
+}
+
+/*###################### sort-by-components, sort-by-peripherals ######################*/
+
+.sort-by-components, .sort-by-peripherals, .sort-by-gaming {
+    width: 100%;
+    height: 40px;
+    margin: 10% 0 4% 0%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100vh;
+}
+
+.sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 1% 0 0 5%;
+    font-family:"Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+    margin-left: 2%;
+    width: 200px;
+    height: 30px;
+    border-color: gray;
+    color: #1a1a1a;
+    font-size: 13px;
+}
+
+/*###################### components-items, peripherals-items, gaming-items ######################*/
+
+.components-items, .peripherals-items, .gaming-items {
+    width: 100%;
+    max-height: 200000px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-left: 4%;
+}
+
+.components-items a, .peripherals-items a, .gaming-items a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Open Sans", sans-serif;
+}
+
+.components-items a:hover, .peripherals-items a:hover, .gaming-items a:hover {
+    font-size: 16px;
+}
+
+.rows, .rows-peripherals, .rows-gaming {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+.ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+.fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+.monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+.ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+    height: 720px;
+    padding: 0 2%;
+    margin: 0 2%;
+    max-width: 29.33%;
+    flex: 29.33%;
+}
+
+.processor-intel:hover, .processor-amd:hover, .motherboard-asrock-m:hover, .motherboard-asus-m:hover, .motherboard-gigabyte-m:hover, .graphic-card-asrock-g:hover, 
+.graphic-card-asus-g:hover, .graphic-card-gigabyte-g:hover, .ram-gskill:hover, .ram-corsair:hover, .ram-crucial:hover, .ram-kingston:hover, .data-storage-ssd:hover, 
+.data-storage-hdd:hover, .data-storage-external-hdd:hover, .fans-and-coolers-fans:hover, .fans-and-coolers-coolers:hover, .fans-and-coolers-wCooling:hover, 
+.cases-and-power-supply-cases:hover, .cases-and-power-supply-power-supply:hover,
+.monitors:hover, .keyboards:hover, .mice:hover, .headsets:hover, .speakers:hover, .microphones:hover, .webcams:hover,
+.ps5:hover, .nintendo-switch:hover, .gaming-chairs:hover, .gaming-desks:hover, .gaming-driving-equipment:hover {
+    border: 2px solid #f6f6f6;
+}
+
+.processor-intel img, .processor-amd img, .motherboard-asrock-m img, .motherboard-asus-m img, .motherboard-gigabyte-m img, .graphic-card-asrock-g img, .graphic-card-asus-g img, 
+.graphic-card-gigabyte-g img, .ram-gskill img, .ram-corsair img, .ram-crucial img, .ram-kingston img, .data-storage-ssd img, .data-storage-hdd img, .data-storage-external-hdd img, 
+.fans-and-coolers-fans img, .fans-and-coolers-coolers img, .fans-and-coolers-wCooling img, .cases-and-power-supply-cases img, .cases-and-power-supply-power-supply img,
+.monitors img, .keyboards img, .mice img, .headsets img, .speakers img, .microphones img, .webcams img,
+.ps5 img, .nintendo-switch img, .gaming-chairs img, .gaming-desks img, .gaming-driving-equipment img {
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+}
+
+.intel, .amd, .asrock, .asus, .gigabyte, .corsair, .crucial, .gskill, .kingston, .ssd, .hdd, .external-hdd, .fan, .cooler, .water-cooling, .case, .power-supply,
+.monitor, .keyboard, .mouse, .headset, .speaker, .microphone, .webcam,
+.ps, .nintendo, .gaming-chair, .gaming-desk, .equipment {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 4%;   
+}
+
+.description h4 {
+    height: 70px;
+    margin-bottom: 2%;
+}
+
+.description h4, .description p {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+}
+
+.description p {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 100;
+    font-size: 15px;
+    margin: 0;
+    height: 80px;
+    line-height: 1.2;
+}
+
+.price-favorite-checked{
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.price {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    width: 80%;   
+}
+
+.price h3 {
+    font-family: "Open Sans", sans-serif; 
+}
+
+.favorite-checked {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    width: 20%; 
+}
+
+.favorite-item {
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer; 
+}
+
+.favorite-item:hover {
+    transform: scale(1.05);
+    color: red;
+    font-weight: bolder;
+}
+
+.favorite-item.red {
+    color: red;
+    font-weight: bolder;
+}
+
+.price, .favorite-checked {
+    margin-top: 5%;
+}
+
+.price-favorite-checked::after, .items-quantity-basket::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.items-quantity-basket {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    height: 80px;
+}
+
+.items-quantity {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 22%; 
+    height: 35px;
+    margin-top: 10%;
+    border: 1px solid gray;
+}
+
+.items-quantity span {
+    text-align: center;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.items-quantity span.minus {
+    font-size: 25px;
+}
+
+.items-quantity span.number{
+    color: gray;
+    pointer-events: none;
+}
+
+.basket {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 78%;
+    margin-top: 10%;
+    height: 35px;
+}
+
+.basket button {
+    border-radius: 0;
+    width: 75%;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    background: black;
+    cursor: pointer;
+}
+
+/*###################### Breakpoint 1 ######################*/
+
+@media screen and (min-width: 4801px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        right: 100px;
+    }
+
+    .arrow-top {
+        font-size: 35px;
+    }
+    
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 34px;
+    }
+
+    .main {
+        min-height: 1150px;
+    }
+
+    .filter-checkbox, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+        max-height: 700px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 35px;
+    } 
+
+    .filter p, .filter-peripherals p, .filter-gaming p {
+        padding-bottom: 15%;
+    }
+
+    .container {
+        padding-left: 10%;
+    }
+    
+    .checkMark {
+        height: 30px;
+        width: 30px; 
+        margin-top: 2%;
+    }
+
+    .search {
+        font-size: 25px;
+    }
+
+    .search-input.active {
+        width: 1000px;
+    }
+
+    .close-icon.active {
+        left: 94%;
+    }
+
+    .search-result-message {
+        font-size: 40px;
+    }
+    
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 38px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 36px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 30px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 25px;
+        width: 300px;
+    }
+
+    .description h4 {
+        font-size: 30px;
+    }
+
+    .description p {
+        font-size: 28px;
+        height: 120px;
+        margin-bottom: 5%;
+    }
+
+    .price-favorite-checked {
+        height: 100px;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 28px;
+    }
+
+    .favorite-item {
+        font-size: 45px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 60px;
+    }
+    
+    .items-quantity span {
+        font-size: 28px;
+    }
+    .basket {
+        height: 60px;
+    }
+    
+    .basket button {
+        height: 60px;
+        font-size: 26px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 1750px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .empty-basket, .empty-wishlist {
+        font-size: 60px;
+    }
+
+    .basket-content .your-basket {
+        font-size: 50px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 1%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 30px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        width: 11%;
+    } 
+    
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 34px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity span {
+        font-size: 30px;
+    }
+
+    .delete-item {
+        font-size: 45px;
+    }
+
+    .checkout-order-summary-box {
+        height: 550px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 26px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 24px;
+    }
+}
+
+/*###################### Breakpoint 2 ######################*/
+
+@media screen and (min-width: 4401px) and (max-width: 4800px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        right: 100px;
+    }
+
+    .arrow-top {
+        font-size: 35px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 30px;
+    }
+
+    .main {
+        min-height: 1100px;
+    }
+
+    .filter-checkbox, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+        max-height: 700px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 30px;
+    } 
+
+    .container {
+        padding-left: 10%;
+    }
+    
+    .checkMark {
+        height: 30px;
+        width: 30px; 
+        margin-top: 2%;
+    }
+
+    .search {
+        font-size: 30px;
+    }
+
+    .search-input.active {
+        width: 1000px;
+    }
+
+    .close-icon.active {
+        left: 94%;
+    }
+
+    .search-result-message {
+        font-size: 38px;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 38px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 36px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 28px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 25px;
+        width: 250px;
+    }
+
+    .description h4 {
+        font-size: 28px;
+    }
+
+    .description p {
+        font-size: 26px;
+        height: 120px;
+        margin-bottom: 5%;
+    }
+
+    .price-favorite-checked {
+        height: 100px;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 26px;
+    }
+
+    .favorite-item {
+        font-size: 38px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 60px;
+    }
+    
+    .items-quantity span {
+        font-size: 28px;
+    }
+    .basket {
+        height: 60px;
+    }
+    
+    .basket button {
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 1550px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .empty-basket, .empty-wishlist {
+        font-size: 60px;
+    }
+    
+    .basket-content .your-basket {
+        font-size: 50px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 1%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 30px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        width: 11%;
+    } 
+    
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 34px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity span {
+        font-size: 30px;
+    }
+
+    .delete-item {
+        font-size: 45px;
+    }
+
+    .checkout-order-summary-box {
+        height: 520px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 26px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 24px;
+    }
+}
+
+/*###################### Breakpoint 3 ######################*/
+
+@media screen and (min-width: 3901px) and (max-width: 4400px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        right: 80px;
+    }
+
+    .arrow-top {
+        font-size: 30px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 32px;
+    }
+
+    .main {
+        min-height: 1100px;
+    }
+
+    .filter-checkbox, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+        max-height: 700px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 32px;
+    } 
+
+    .container {
+        padding-left: 10%;
+    }
+    
+    .checkMark {
+        height: 25px;
+        width: 25px; 
+        margin-top: 2%;
+    }
+
+    .search {
+        font-size: 25px;
+    }
+
+    .search-input.active {
+        width: 1000px;
+    }
+
+    .close-icon.active {
+        left: 94%;
+    }
+
+    .search-result-message {
+        font-size: 36px;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 38px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 36px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 30px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 26px;
+        width: 260px;
+    }
+
+    .description h4 {
+        font-size: 28px;
+        margin-bottom: 5%;
+    }
+
+    .description p {
+        font-size: 27px;
+        height: 120px;
+        margin-bottom: 5%;
+    }
+
+    .price-favorite-checked {
+        height: 100px;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 28px;
+    }
+
+    .favorite-item {
+        font-size: 38px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 60px;
+    }
+    
+    .items-quantity span {
+        font-size: 28px;
+    }
+    .basket {
+        height: 60px;
+    }
+    
+    .basket button {
+        height: 60px;
+        font-size: 26px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 1550px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .empty-basket, .empty-wishlist {
+        font-size: 55px;
+    }
+
+    .basket-content .your-basket {
+        font-size: 50px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 1%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 30px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        width: 11%;
+    } 
+    
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 34px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity span {
+        font-size: 30px;
+    }
+
+    .delete-item {
+        font-size: 45px;
+    }
+
+    .checkout-order-summary-box {
+        height: 500px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 26px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 24px;
+    }
+}
+
+/*###################### Breakpoint 4 ######################*/
+
+@media screen and (min-width: 3501px) and (max-width: 3900px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        right: 80px;
+    }
+
+    .arrow-top {
+        font-size: 30px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 32px;
+    }
+
+    .main {
+        min-height: 1100px;
+    }
+
+    .filter-checkbox, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+        max-height: 800px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 30px;
+    } 
+
+    .filter p, .filter-peripherals p, .filter-gaming p {
+        padding-bottom: 15%;
+    }
+
+    .container {
+        padding-left: 10%;
+    }
+
+    .checkMark{
+        height: 25px;
+        width: 25px; 
+        margin-top: 2%;
+    }
+
+    .search {
+        font-size: 24px;
+    }
+
+    .search-input.active {
+        width: 1100px;
+    }
+
+    .close-icon.active {
+        left: 94%;
+    }
+
+    .search-result-message {
+        font-size: 36px;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 36px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 34px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 28px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 23px;
+        width: 250px;
+    }
+
+    .description h4 {
+        font-size: 28px;
+        margin-bottom: 10%;
+    }
+
+    .description p {
+        font-size: 27px;
+        height: 120px;
+        margin-bottom: 5%;
+    }
+
+    .price-favorite-checked {
+        height: 100px;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 27px;
+    }
+
+    .favorite-item {
+        font-size: 38px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 55px;
+    }
+    
+    .items-quantity span {
+        font-size: 28px;
+    }
+    .basket {
+        height: 55px;
+    }
+    
+    .basket button {
+        height: 55px;
+        font-size: 25px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 1450px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .empty-basket, .empty-wishlist {
+        font-size: 55px;
+    }
+
+    .basket-content .your-basket {
+        font-size: 40px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 1%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 25px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        width: 11%;
+    } 
+    
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 28px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity span {
+        font-size: 28px;
+    }
+
+    .delete-item {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box {
+        height: 430px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 22px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 21px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 20px;
+    }
+}
+
+/*###################### Breakpoint 5 ######################*/
+
+@media screen and (min-width: 3001px) and (max-width: 3500px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        right: 70px;
+    }
+
+    .arrow-top {
+        font-size: 28px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 26px;
+    }
+
+    .main {
+        min-height: 1050px;
+    }
+
+    .filter-checkbox, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+        max-height: 650px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 28px;
+    } 
+
+    .filter p, .filter-peripherals p, .filter-gaming p {
+        margin-bottom: 10%;
+    }
+
+    .container {
+        padding-left: 10%;
+    }
+
+    .checkMark{
+        height: 28px;
+        width: 28px; 
+    }
+
+    .search {
+        font-size: 24px;
+    }
+
+    .search-input.active {
+        width: 900px;
+    }
+
+    .close-icon.active {
+        left: 92%;
+    }
+
+    .search-result-message {
+        font-size: 32px;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 36px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 34px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 28px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 23px;
+        width: 250px;
+    }
+
+    .description h4 {
+        font-size: 28px;
+        margin-bottom: 10%;
+    }
+
+    .description p {
+        font-size: 27px;
+        height: 120px;
+        margin-bottom: 5%;
+    }
+
+    .price-favorite-checked {
+        height: 100px;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 28px;
+    }
+
+    .favorite-item {
+        font-size: 38px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 55px;
+    }
+    
+    .items-quantity span {
+        font-size: 28px;
+    }
+    .basket {
+        height: 55px;
+    }
+    
+    .basket button {
+        height: 55px;
+        font-size: 24px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 1350px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .empty-basket, .empty-wishlist {
+        font-size: 50px;
+    }
+
+    .basket-content .your-basket {
+        font-size: 40px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 1%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 22px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        padding-left: 2%;
+    } 
+
+    .remove-all-button {
+        margin-right: 2%;
+    }
+
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 22px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity span {
+        font-size: 25px;
+    }
+
+    .delete-item {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box {
+        height: 400px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 22px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 20px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 20px;
+    }
+}
+
+/*###################### Breakpoint 6 ######################*/
+
+@media screen and (min-width: 2601px) and (max-width: 3000px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        right: 70px;
+    }
+
+    .arrow-top {
+        font-size: 28px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 22px;
+    }
+
+    .main {
+        min-height: 1050px;
+    }
+
+    .filter-checkbox, .filter-peripherals-checkbox, .filter-gaming-checkbox {
+        max-height: 500px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 21px;
+    } 
+
+    .container {
+        padding-left: 10%;
+    }
+
+    .search {
+        font-size: 22px;
+    }
+
+    .search-input.active {
+        width: 800px;
+    }
+
+    .close-icon.active {
+        left: 92%;
+    }
+
+    .search-result-message {
+        font-size: 30px;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 34px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 32px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 19px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 15px;
+    }
+
+    .description h4 {
+        font-size: 22px;
+    }
+
+    .description p {
+        font-size: 21px;
+        height: 100px;
+        margin-bottom: 5%;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 21px;
+    }
+
+    .favorite-item {
+        font-size: 32px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 50px;
+    }
+    
+    .items-quantity span {
+        font-size: 26px;
+    }
+    .basket {
+        height: 50px;
+    }
+    
+    .basket button {
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 1080px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+    
+    .empty-basket, .empty-wishlist {
+        font-size: 40px;
+    }
+
+    .basket-content .your-basket {
+        font-size: 40px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 1%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 22px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        padding-left: 2%;
+    } 
+
+    .remove-all-button {
+        margin-right: 2%;
+    }
+
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 22px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity{
+        font-size: 21px;
+    }
+
+    .delete-item {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box {
+        height: 400px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 22px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 20px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 20px;
+    }   
+}
+
+/*###################### Breakpoint 7 ######################*/
+
+@media screen and (min-width: 2201px) and (max-width: 2600px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        right: 60px;
+    }
+
+    .arrow-top {
+        font-size: 25px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 20px;
+    }
+
+    .main {
+        min-height: 800px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 19px;
+    } 
+
+    .search {
+        font-size: 20px;
+    }
+
+    .search-input.active {
+        width: 600px;
+    }
+
+    .close-icon.active {
+        left: 92%;
+    }
+
+    
+    .search-result-message {
+        font-size: 30px;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 32px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 30px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 23px;
+        height: 23px;
+        line-height: 23px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 17px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 15px;
+    }
+
+    .description h4 {
+        font-size: 20px;
+    }
+
+    .description p {
+        font-size: 19px;
+        height: 100px;
+        margin-bottom: 5%;
+    }
+
+    .components-items .price, .peripherals-items .price, .gaming-items .price {
+        font-size: 19px;
+    }
+
+    .favorite-item {
+        font-size: 30px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 45px;
+    }
+    
+    .items-quantity span {
+        font-size: 24px;
+    }
+    .basket {
+        height: 45px;
+    }
+    
+    .basket button {
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 960px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .empty-basket, .empty-wishlist {
+        font-size: 35px;
+    }
+
+    .items-picked .items-quantity {
+        padding-left: 2%;
+    }
+
+    .basket-details, .remove-all-button {
+        font-size: 20px;
+    }
+    
+    .product-quantity {
+        padding-right: 0;
+    }
+
+    .product-price {
+        padding-right: 0;
+        padding-left: 2%;
+    } 
+
+    .remove-all-button {
+        margin-right: 2%;
+    }
+
+    .items-picked img {
+        height: 15%;
+        width: 15%;
+    }
+
+    .items-picked h4 {
+        font-size: 21px;
+    }
+
+    .items-picked .price, .items-picked .items-quantity{
+        font-size: 20px;
+    }
+
+    .delete-item {
+        font-size: 30px;
+    }
+
+    .checkout-order-summary-box {
+        height: 400px;
+    }
+
+    .checkout-order-summary-box .purchase-summary, .checkout-order-summary-box .total {
+        font-size: 22px;
+    }
+
+    .checkout-order-summary-box .subtotal {
+        font-size: 20px;
+    }
+
+    .proceed-to-checkout, .return-to-basket {
+        font-size: 20px;
+    }   
+}
+
+/*###################### Breakpoint 8 ######################*/
+
+@media screen and (min-width: 2001px) and (max-width: 2200px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .scroll-top-btn {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        right: 60px;
+    }
+
+    .arrow-top {
+        font-size: 25px;
+    }
+
+    .navbar-components, .navbar-peripherals, .navbar-gaming {
+        font-size: 18px;
+    }
+
+    .container, .filter p, .filter-peripherals p, .filter-gaming p {
+        font-size: 17px;
+    } 
+
+    .search {
+        font-size: 18px;
+    }
+
+    .search-input.active {
+        width: 550px;
+    }
+
+    .close-icon.active {
+        left: 90%;
+    }
+
+    .wishlist {
+        margin-left: 10%;
+        width: 60px;
+    }
+
+    .favorite {
+        font-size: 30px;
+    }
+
+    .shopping-bag-icon {
+        font-size: 28px;
+    }
+
+    .favorite-quantity, .shopping-bag-quantity {
+        width: 23px;
+        height: 23px;
+        line-height: 23px;
+    }
+
+    .sort-by-components form, .sort-by-peripherals form, .sort-by-gaming form {
+        font-size: 16px;
+    }
+    
+    .sort-by-components select, .sort-by-peripherals select, .sort-by-gaming select {
+        font-size: 15px;
+    }
+
+    .description h4 {
+        font-size: 18px;
+    }
+
+    .description p {
+        font-size: 16px;
+        height: 100px;
+    }
+
+    .favorite-item {
+        font-size: 28px;
+    }
+
+    .items-quantity-basket {
+        height: 100px;
+    }
+
+    .items-quantity {
+        height: 40px;
+    }
+    
+    .items-quantity span {
+        font-size: 22px;
+    }
+    .basket {
+        height: 40px;
+    }
+    
+    .basket button {
+        height: 40px;
+        font-size: 15px;
+    }
+    
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 850px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .items-picked .items-quantity {
+        padding-left: 2%;
+    }
+}
+
+/*###################### Breakpoint 9 ######################*/
+
+@media screen and (min-width: 1701px) and (max-width: 2000px) {
+   
+    .top-header-logo {width: 14%;}
+    .top-header-nav {width: 68%;}
+    .top-header-search {width: 12%;}
+    .top-header-icons {width: 6%;}
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width: 84%;}
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .search-input.active {
+        width: 450px;
+    }
+
+    .close-icon.active {
+        left: 88%;
+    }
+
+    .container {
+        font-size: 15px;
+    } 
+    
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams {
+        height: 770px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .items-picked {width: 68%;}
+    .order-form {width: 68%;}
+    .checkout-order-summary-box {width: 32%;};
+
+    .basket-details {width: 68%;}
+
+    .product {width: 53%;}
+
+    .checkout-order-summary-box {
+        height: 280px;
+    }
+}
+
+/*###################### Breakpoint 10 ######################*/
+
+@media screen and (min-width: 1501px) and (max-width: 1700px) {
+
+    .top-header-logo {width: 18%;}
+    .top-header-nav {width: 60%;}
+    .top-header-search {width: 14%;}
+    .top-header-icons {width: 8%;}
+
+    .top-header-search {
+        padding-left: 10px;
+    }
+
+    .search.active {
+        right: 8%;
+    }
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+  
+    .shopping-bag {
+        padding-left: 0;
+    }
+
+    .slideshow {width:100%;}
+    .filter {width: 16%;}
+    .components-items {width:84%;}  
+
+    .filter-peripherals {width: 16%;}
+    .peripherals-items {width:84%;} 
+
+    .filter-gaming {width: 16%;}
+    .gaming-items {width: 84%;}
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .basket-details {width: 60%;}
+    .items-picked {width: 66%;}
+    .order-form {width: 66%;}
+    .checkout-order-summary-box {width: 34%;};
+
+    .items-quantity-basket {
+        margin-top: 0;
+    }
+
+    .product {
+        width: 52%;
+        padding-left: 7%;
+    }
+    
+    .product-quantity {
+        padding-left: 2%;
+        justify-content: center;
+    }
+    
+    .product-price {
+        width: 15%;
+        justify-content: center;
+        padding-left: 3%;
+    }
+    
+    .remove-all-button {
+        width: 22%;
+        justify-content: center;
+        padding-left: 4%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 16px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked {
+        margin-left: 0; 
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 670px;
+    }
+
+    .favorite-product {
+        height: 770px;
+    }
+
+    .description p {
+        height: 100px;
+        padding-top: 5%;
+    }
+}
+
+/*###################### Breakpoint 11 ######################*/
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+
+    .top-header-logo {width: 18%;}
+    .top-header-nav {width: 57%;}
+    .top-header-search {width: 16%;}
+    .top-header-icons {width: 9%;}
+
+    .top-header-search {
+        padding-left: 7px;
+    }
+
+    .search.active {
+        right: 9%;
+    }
+
+    .search-input {
+        width: 105px;
+    }
+
+    .search-input.active {
+        width: 780px;
+    }
+
+    .close-icon.active {
+        left: 92%;
+    }
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .top-header-icons {
+        justify-content: center;
+    }
+
+    .main {
+        padding: 3% 6%;
+    }
+
+    .slideshow {width:100%;}
+    .filter {width: 18%;}
+    .components-items {width:82%;}
+
+    .filter-peripherals {width: 18%;}
+    .peripherals-items {width:82%;} 
+
+    .filter-gaming {width: 18%;}
+    .gaming-items {width: 82%;}
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .basket-details {width: 60%;}
+    .items-picked {width: 66%;}
+    .order-form {width: 66%;}
+    .checkout-order-summary-box {width: 34%;};
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+        justify-content: center;
+    }
+    
+    .product-price {
+        padding-right: 3%;
+        width: 15%;
+        justify-content: center;
+    }
+    
+    .remove-all-button {
+        width: 22%;
+        justify-content: center;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 16px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked {
+        margin-left: 0; 
+    }
+
+    .filter-checkbox {
+        margin-top: 25%;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        height: 680px;
+    }
+
+    .favorite-product {
+        height: 750px;
+    }
+
+    .description h4 {
+        font-size: 15px;
+        height: 100px;
+    }
+
+    .description p {
+        font-size: 14px;
+        height: 100px;
+        padding-top: 2%;
+    }
+
+}
+
+/*###################### Breakpoint 12 ######################*/
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    
+    .top-header-logo {width: 20%;}
+    .top-header-nav {width: 52%;}
+    .top-header-search {width: 19%;}
+    .top-header-icons {width: 9%;}
+
+    ul.navbar-menu li.navbar-components, ul.navbar-menu li.navbar-peripherals, ul.navbar-menu li.navbar-gaming {
+        padding: 0 2rem;
+    }
+
+    .search.active {
+        right: 9%;
+    }
+
+    .search-input {
+        width: 105px;
+    }
+
+    .search-input.active {
+        width: 620px;
+    }
+
+    .close-icon.active {
+        left: 92%;
+    }
+
+    .top-header-icons {
+        justify-content: center;
+    }
+
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .main {
+        padding: 2% 2% 2% 4%;
+        margin-top: 6%;
+    }
+
+    .slideshow {width:75%;}
+    .filter {width: 25%;}
+    .components-items {width:75%;}
+
+    .filter-peripherals {width: 25%;}
+    .peripherals-items {width:75%;} 
+
+    .filter-gaming {width: 25%;}
+    .gaming-items {width: 75%;}
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .basket-details {width: 60%;}
+    .items-picked {width: 66%;}
+    .order-form {width: 66%;}
+    .checkout-order-summary-box {width: 34%;};
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+        justify-content: center;
+    }
+    
+    .product-price {
+        padding-right: 4.5%;
+        width: 15%;
+        justify-content: center;
+    }
+    
+    .remove-all-button {
+        width: 22%;
+        justify-content: center;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 16px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked {
+        margin-left: 0; 
+    }
+
+    .checkout-order-summary-box {
+        height: 300px;
+    }
+
+    .filter-checkbox {
+        margin-top: 10%;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment {
+        flex: 46%;
+        max-width: 46%;
+    }
+
+    .favorite-product {
+        flex: 46%;
+        max-width: 46%;
+        height: 870px;
+    }
+
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams {
+        flex: 46%;
+        max-width: 46%;
+        height: 750px;
+    }
+
+    .description h4 {
+        font-size: 15px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 85px;
+    }
+
+    .peripherals-items .description p {
+        height: 95px;
+    }   
+
+}
+
+/*###################### Breakpoint 13 ######################*/
+    
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+
+    .top-header-logo {width: 24%;}
+    .top-header-nav {width: 46%;}
+    .top-header-search {width: 19%;}
+    .top-header-icons {width: 11%;}
+
+    ul.navbar-menu {
+        padding-left: 7%;
+        padding-right: 0;
+    }
+
+    ul.navbar-menu li.navbar-components, ul.navbar-menu li.navbar-peripherals, ul.navbar-menu li.navbar-gaming {
+        font-size: 15px;
+        padding: 0 2rem;
+    }
+
+    .search.active {
+        right: 11%;
+    }
+
+    .search-input {
+        width: 105px;
+    }
+
+    .search-input.active {
+        width: 500px;
+    }
+
+    .close-icon.active {
+        left: 90%;
+    }
+     
+    .search-mobile, .search-box-mobile, .hamburger-icon {display: none;}
+
+    .main {
+        padding: 2% 2% 2% 4%;
+    }
+
+    .slideshow {width:75%;}
+    .filter {width: 25%;}
+    .components-items {width:75%;} 
+
+    .filter-peripherals {width: 25%;}
+    .peripherals-items {width:75%;} 
+
+    .filter-gaming {width: 25%;}
+    .gaming-items {width: 75%;}
+
+    .dot {
+        height: 13px;
+        width: 13px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .basket-details {width: 60%;}
+    .items-picked {width: 66%;}
+    .order-form {width: 66%;}
+    .checkout-order-summary-box {width: 34%;};
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+        justify-content: left;
+    }
+    
+    .product-price {
+        padding-right: 4.5%;
+        width: 16%;
+        justify-content: left;
+    }
+    
+    .remove-all-button {
+        width: 22%;
+        justify-content: center;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 15px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked {
+        margin-left: 0; 
+    }
+
+    .checkout-order-summary-box {
+        height: 290px;
+    }
+
+    .filter-checkbox {
+        margin-top: 10%;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment{
+        flex: 46%;
+        max-width: 46%;
+        height: 660px;
+    }
+
+    .favorite-product {
+        flex: 46%;
+        max-width: 46%;
+        height: 800px;
+    }
+
+    .description h4 {
+        font-size: 15px;
+        height: 80px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .peripherals-items .description p {
+        padding-top: 4%;
+        height: 95px;
+    }
+
+}
+
+/*###################### Breakpoint 14 ######################*/
+    
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    
+    .top-header-logo {width: 60%;}
+    .top-header-nav {display: none;}
+    .top-header-search {display: none;}
+    .top-header-icons {width: 40%;}
+
+    .top-header-icons {
+        justify-content: right;
+    }
+
+    .search-mobile {
+        width: 60px;
+        padding-right: 20px;
+   }
+
+    .wishlist {    
+        padding-right: 20px;
+        width: 50px;
+    }
+
+    .shopping-bag {
+        padding-right: 11px;
+        padding-left: 0;
+        right: 2%;
+        width: 45px;
+    }
+
+    .side-menu {padding-top: 15px;}
+
+    .main {
+        margin-top: 0;
+        padding: 2% 0%;
+    }
+
+    .slideshow {width:80%;}
+    .filter {display: none;}
+    .components-items {width:100%;}   
+
+    .filter-peripherals {display: none;}
+    .peripherals-items {width:100%;} 
+
+    .filter-gaming {display: none;}
+    .gaming-items {width: 100%;}
+
+    .dot {
+        height: 13px;
+        width: 13px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rows-basket {
+        flex-direction: column;
+    }
+
+    .basket-details {
+        width: 100%;
+    }
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+    }
+    
+    .product-price {
+        padding-right: 4.5%;
+        width: 15%;
+    }
+    
+    .remove-all-button {
+        width: 20%;
+        justify-content: center;
+        padding-left: 4%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 14px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked, .checkout-order-summary-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkout-order-summary-box {
+        margin-top: 50px;
+        height: 350px;
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+
+    .results-count-components, .results-count-peripherals, .results-count-gaming {
+        display: block;
+    }
+
+    .components-items, .peripherals-items, .gaming-items {
+        padding-left: 0;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment,
+    .favorite-product {
+        flex: 50%;
+        max-width: 50%;
+        margin: 0;
+        height: 820px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 75px;
+    }
+
+}
+
+/*###################### Breakpoint 15 ######################*/
+
+@media screen and (min-width: 701px) and (max-width: 800px){
+
+    .top-header-logo {width: 60%;}
+    .top-header-nav {display: none;}
+    .top-header-search {display: none;}
+    .top-header-icons {width: 40%;}
+
+    .pc-shop-logo {
+        width: 176;
+        height: 20;
+    }
+
+    .top-header-icons {
+        justify-content: right;
+    }
+
+    .search-mobile {
+        width: 60px;
+        padding-right: 20px;
+   }
+
+    .wishlist {    
+        padding-right: 20px;
+        width: 50px;
+    }
+
+    .shopping-bag {
+        padding-right: 11px;
+        padding-left: 0;
+        right: 2%;
+        width: 45px;
+    }
+
+    .side-menu {padding-top: 15px;}
+
+    .main {
+        margin-top: 0;
+        padding: 2% 0%;
+    }
+
+    .slideshow {width:85%;}
+    .filter {display: none;}
+    .components-items {width:100%;}
+
+    .filter-peripherals {display: none;}
+    .peripherals-items {width:100%;} 
+
+    .filter-gaming {display: none;}
+    .gaming-items {width: 100%;}
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rows-basket {
+        flex-direction: column;
+    }
+
+    .basket-details {
+        width: 100%;
+    }
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+    }
+    
+    .product-price {
+        padding-right: 5%;
+        width: 15%;
+    }
+    
+    .remove-all-button {
+        width: 20%;
+        justify-content: center;
+        padding-left: 3%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 14px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked, .checkout-order-summary-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkout-order-summary-box {
+        margin-top: 50px;
+        height: 340px;
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+
+    .results-count-components, .results-count-peripherals, .results-count-gaming {
+        display: block;
+    }
+
+    .components-items, .peripherals-items, .gaming-items {
+        padding-left: 0;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment,
+    .favorite-product {        
+        flex: 50%;
+        max-width: 50%;
+        margin: 0;
+        height: 770px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 85px;
+    }
+
+    .peripherals-items .description p {
+        height: 90px;
+    }
+
+}
+
+/*###################### Breakpoint 16 ######################*/
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+    
+    .top-header-logo {width: 60%;}
+    .top-header-nav {display: none;}
+    .top-header-search {display: none;}
+    .top-header-icons {width: 40%;}
+
+    .pc-shop-logo {
+        width: 176;
+        height: 20;
+    }
+
+    .top-header-icons {
+        justify-content: right;
+    }
+
+    .search-mobile {
+        width: 60px;
+        padding-right: 20px;
+   }
+
+    .wishlist {    
+        padding-right: 20px;
+        width: 50px;
+    }
+
+    .shopping-bag {
+        padding-right: 11px;
+        padding-left: 0;
+        right: 2%;
+        width: 45px;
+    }
+
+    .side-menu {padding-top: 15px;}
+
+    .main {
+        margin-top: 0;
+        padding: 2% 0%;
+    }
+
+    .slideshow {width:90%;}
+    .filter {display: none;}
+    .components-items {width:100%;} 
+
+    .filter-peripherals {display: none;}
+    .peripherals-items {width:100%;}
+
+    .filter-gaming {display: none;}
+    .gaming-items {width: 100%;}
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rows-basket {
+        flex-direction: column;
+    }
+
+    .basket-details {
+        width: 100%;
+    }
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+    }
+    
+    .product-price {
+        padding-right: 5%;
+        width: 15%;
+    }
+    
+    .remove-all-button {
+        width: 20%;
+        justify-content: center;
+        padding-left: 2%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 14px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked, .checkout-order-summary-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkout-order-summary-box {
+        margin-top: 50px;
+        height: 330px;
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+
+    .results-count-components, .results-count-peripherals, .results-count-gaming {
+        display: block;
+    }
+
+    .components-items, .peripherals-items, .gaming-items {
+        padding-left: 0;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment,
+    .favorite-product {        
+        flex: 50%;
+        max-width: 50%;
+        margin: 0;
+        height: 700px;
+    }
+
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams {
+        flex: 50%;
+        max-width: 50%;
+        margin: 0;
+        height: 720px;
+    }
+    
+    .components-items .description h4, .gaming-items .description h4 {
+        padding-bottom: 2%;
+    }
+
+    .components-items .description p, .gaming-items .description p {
+        letter-spacing: 0;
+        font-size: 14px;
+        height: 85px;
+    }
+
+    .peripherals-items .description h4 {
+        height: 100px;
+    }
+
+    .peripherals-items .description p {
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+
+}
+
+/*###################### Breakpoint 17 ######################*/
+
+@media screen and (min-width: 501px) and (max-width: 600px) {
+    
+    .top-header-logo {width: 60%;}
+    .top-header-nav {display: none;}
+    .top-header-search {display: none;}
+    .top-header-icons {width: 40%;}
+
+    .pc-shop-logo {
+        width: 176;
+        height: 20;
+    }
+
+    .top-header-icons {
+        justify-content: right;
+    }
+
+    .top-header-search {
+        padding-left: 6px;
+    }
+
+    .close-search-mobile {
+        color: black;
+    }
+
+    .search-mobile {
+        width: 60px;
+        padding-right: 20px;
+   }
+
+    .wishlist {    
+        padding-right: 20px;
+        width: 50px;
+    }
+
+    .shopping-bag {
+        padding-right: 11px;
+        padding-left: 0;
+        right: 2%;
+        width: 45px;
+    }
+
+    .side-menu {padding-top: 15px;}
+
+    .main {
+        margin-top: 0;
+        padding: 2% 0%;  
+    }
+
+    .slideshow {width:95%;}
+    .filter {display: none;}
+    .components-items {width:100%;}
+
+    .filter-peripherals {display: none;}
+    .peripherals-items {width:100%;} 
+
+    .filter-gaming {display: none;}
+    .gaming-items {width: 100%;}
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rows-basket {
+        flex-direction: column;
+    }
+
+    .basket-details {
+        width: 100%;
+    }
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+    }
+    
+    .product-price {
+        padding-right: 5%;
+        width: 15%;
+    }
+    
+    .remove-all-button {
+        width: 20%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 14px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked, .checkout-order-summary-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkout-order-summary-box {
+        margin-top: 50px;
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+
+    .results-count-components, .results-count-peripherals, .results-count-gaming {
+        display: block;
+    }
+
+    .components-items, .peripherals-items, .gaming-items {
+        padding-left: 0;
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment,
+    .favorite-product {
+        flex: 50%;
+        max-width: 50%;
+        margin: 0;
+        height: 660px;
+    }
+
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams {
+        flex: 50%;
+        max-width: 50%;
+        margin: 0;
+        height: 670px;
+    }
+
+    .description h4 {
+        height: 100px;
+    }
+
+    .description p {
+        letter-spacing: 0;
+        height: 85px;
+        font-size: 14px;
+    }
+
+    .items-quantity {
+        width: 30%;
+    }
+
+    .basket {
+        width: 70%;
+    }
+
+}
+
+/*###################### Breakpoint 18 ######################*/
+
+@media screen and (min-width: 421px) and (max-width: 500px) {
+    
+    .top-header-logo {width: 70%;}
+    .top-header-nav {display: none;}
+    .top-header-search {display: none;}
+    .top-header-icons {width: 30%;}
+
+    .top-header {
+        padding: 0;
+    }
+
+    .pc-shop-logo {
+        width: 176;
+        height: 20;
+    }
+
+    .top-header-icons {
+        justify-content: right;
+    }
+
+    .close-search-mobile {
+        color: black;
+    }
+
+    .search-mobile {
+        width: 55px;
+        padding-right: 20px;
+   }
+
+    .wishlist {    
+        padding-right: 20px;
+        width: 50px;
+    }
+
+    .shopping-bag {
+        padding-right: 11px;
+        padding-left: 0;
+        right: 2%;
+        width: 40px;
+    }
+
+    .side-menu {padding-top: 15px;}
+
+    .main {
+        margin-top: 0;
+        padding: 2% 0%;
+    }
+
+    .slideshow {width:100%;}
+    .filter {display: none;}
+    .components-items {width:100%;}
+
+    .filter-peripherals {display: none;}
+    .peripherals-items {width:100%;} 
+
+    .filter-gaming {display: none;}
+    .gaming-items {display: 100%;}
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rows-basket {
+        flex-direction: column;
+    }
+
+    .basket-details {
+        width: 100%;
+    }
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+    }
+    
+    .product-price {
+        padding-right: 5%;
+        width: 15%;
+    }
+    
+    .remove-all-button {
+        width: 20%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 14px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked, .checkout-order-summary-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkout-order-summary-box {
+        margin-top: 50px;
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+
+    .results-count-components, .results-count-peripherals, .results-count-gaming {
+        display: block;
+    }
+
+    .components-items, .peripherals-items, .gaming-items {
+        padding-left: 0;  
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment,
+    .favorite-product {        
+        flex: 50%;
+        max-width: 50%;
+        border: 1px solid #eee;
+        margin: 0;
+        height: 640px;
+    }
+
+    .description {
+        margin-left: 5%;
+    }
+
+    .description h4 {
+        height: 120px;
+    }
+
+    .description p {
+        letter-spacing: 0;
+        height: 100px;
+        font-size: 14px;
+    }
+    
+    #intel-1 .items-quantity-basket, #intel-1 .price-favorite-checked {
+        padding-left: 5%;
+    }
+
+    .items-quantity {
+        width: 30%;
+    }
+
+    .basket {
+        width: 70%;
+    }  
+
+}
+
+/*###################### Breakpoint 19 ######################*/
+
+@media screen and (max-width: 420px) {
+    
+    .top-header-logo {width: 50%;}
+    .top-header-nav {display: none;}
+    .top-header-search {display: none;}
+    .top-header-icons {width: 50%;}
+
+    .top-header {
+        padding: 0;
+    }
+
+    .pc-shop-logo {
+        width: 176;
+        height: 20;
+    }
+
+    .top-header-icons {
+        justify-content: right;
+    }
+
+    .close-search-mobile {
+        color: black;
+    }
+
+   .search-mobile {
+        width: 55px;
+        padding-right: 20px;
+   }
+
+    .wishlist {    
+        padding-right: 20px;
+        width: 50px;
+    }
+
+    .shopping-bag {
+        padding-right: 11px;
+        padding-left: 0;
+        right: 2%;
+        width: 40px;
+    }
+
+    .side-menu {padding-top: 15px;}
+
+    .main {
+        margin-top: 0;
+        padding: 2% 0%;
+    }
+
+    .slideshow {width:100%;}
+    .filter {display: none;}
+    .components-items {width:100%;}
+
+    .filter-peripherals {display: none;}
+    .peripherals-items {width:100%;} 
+
+    .filter-gaming {display: none;}
+    .gaming-items {width: 100%;}
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .favorite-content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .favorites-picked {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .basket-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rows-basket {
+        flex-direction: column;
+    }
+
+    .basket-details {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .product {
+        width: 46%;
+        padding-left: 5%;
+    }
+    
+    .product-quantity {
+        padding-right: 5%;
+    }
+    
+    .product-price {
+        padding-right: 5%;
+        width: 15%;
+    }
+    
+    .remove-all-button {
+        width: 20%;
+    }  
+    
+    .items-picked img {
+        width: 14%;
+        height: 14%;
+    }
+
+    .items-picked h4 {
+        width: 29%;
+        font-size: 13px;
+        padding-right: 2%;
+    } 
+
+    .items-picked .items-quantity {
+        justify-content: left;
+        width: 13%; 
+        padding-left: 0%;
+        margin: 0;
+    }
+    
+    .items-picked .price {
+        width: 20%;
+        font-size: 15px;
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    .items-picked, .checkout-order-summary-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .checkout-order-summary-box {
+        margin-top: 50px;
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+
+    .results-count-components, .results-count-peripherals, .results-count-gaming {
+        display: block;
+    }
+
+    .components-items, .peripherals-items, .gaming-items {
+        padding-left: 0;  
+    }
+
+    .processor-intel, .processor-amd, .motherboard-asrock-m, .motherboard-asus-m, .motherboard-gigabyte-m, .graphic-card-asrock-g, .graphic-card-asus-g, .graphic-card-gigabyte-g, 
+    .ram-gskill, .ram-corsair, .ram-crucial, .ram-kingston, .data-storage-ssd, .data-storage-hdd, .data-storage-external-hdd, .fans-and-coolers-fans, .fans-and-coolers-coolers, 
+    .fans-and-coolers-wCooling, .cases-and-power-supply-cases, .cases-and-power-supply-power-supply,
+    .monitors, .keyboards, .mice, .headsets, .speakers, .microphones, .webcams,
+    .ps5, .nintendo-switch, .gaming-chairs, .gaming-desks, .gaming-driving-equipment,
+    .favorite-product {        
+        flex: 50%;
+        max-width: 50%;
+        border: 1px solid #eee;
+        margin: 0;
+        height: 590px;
+    }
+
+    .description {
+        margin-left: 5%;
+    }
+
+    .description h4 {
+        height: 120px;
+    }
+
+    .description p {
+        letter-spacing: 0;
+        height: 100px;
+        font-size: 14px;
+    }
+    
+    #intel-1 .items-quantity-basket, #intel-1 .price-favorite-checked {
+        padding-left: 5%;
+    }
+
+    .items-quantity {
+        width: 30%;
+    }
+
+    .basket {
+        width: 70%;
+    }
+  
+}
